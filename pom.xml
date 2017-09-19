@@ -8,7 +8,33 @@
     <artifactId>borsch-cop</artifactId>
     <version>1.0</version>
 
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/sax/sax -->
+        <dependency>
+            <groupId>sax</groupId>
+            <artifactId>sax</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+    </dependencies>
+
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <excludes>
+                    <exclude>*.xml</exclude>
+                </excludes>
+                <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

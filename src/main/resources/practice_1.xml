@@ -1,0 +1,13 @@
+<beans>
+
+    <scan-package package="borsch.tester" />
+
+    <bean class="borsch.test.practice1.pojo.PlainObject" id="instance1" />
+
+    <!-- comment this bean to raise AutowiredException -->
+    <bean class="borsch.test.practice1.pojo.PlainObjectTwo" />
+
+    <!-- both this class will raise BeanCreationException -->
+    <!--<bean class="borsch.test.practice1.pojo.PrivateConstructor" />-->
+    <!--<bean class="borsch.test.practice1.pojo.NoDefaultConstructor" />-->
+</beans>
